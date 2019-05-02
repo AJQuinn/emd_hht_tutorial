@@ -7,21 +7,21 @@
 % components.
 %
 % Taken together, these steps allow us to compute time-frequency plots at a
-% much higher resolution than available with most standard methods. 
+% much higher resolution than available with most standard methods.
 %
-% Here we will analyse at some simulations and some example data using the 
+% Here we will analyse at some simulations and some example data using the
 % fieldtrip toolbox
 
 %% Getting started
 %
-% To run this tutorial you will need to  be running matlab R2018a or more 
-% recent with the signal processing toolbox. 
-% The  Empirical Mode Decomposition functions used here are not available 
+% To run this tutorial you will need to  be running matlab R2018a or more
+% recent with the signal processing toolbox.
+% The  Empirical Mode Decomposition functions used here are not available
 % in older versions.
 %
 %----------
 %
-% Next, you will need a recent version of Fieldtrip on the  matlab path. 
+% Next, you will need a recent version of Fieldtrip on the  matlab path.
 % Fieldtrip and a host of tutorials are available here:
 %
 % http://www.fieldtriptoolbox.org
@@ -83,7 +83,7 @@ end
 % frequency domain.
 %
 % simple_signal contains a simple sinusoidal 10Hz modulating signal with a
-% 53Hz amplitude modulated signal  
+% 53Hz amplitude modulated signal
 %
 % nonlin_signal is similar to simple_signal but the 10Hz oscillation has a
 % non-sinusoidal waveform shape
@@ -124,9 +124,9 @@ imf3 = [nonstat_signal.modulated_ts; nonstat_signal.modulating_ts]';
 % power (power = amplitude.^2)
 %
 % The HHT plot is a sparse distribution of the instantaneous amplitude and
-% frequency of each component in the signal. The instantaneous amplitude (IA) 
+% frequency of each component in the signal. The instantaneous amplitude (IA)
 % is computed from the abs of the Hilbert Transform. The instantaneous
-% frequency (IF) is computed from the derivative of the instataneous phase. 
+% frequency (IF) is computed from the derivative of the instataneous phase.
 
 % We compute a value for each signal at every time-point. Next we build a
 % sparse matrix with an entry in every column for each signal component
@@ -145,7 +145,7 @@ imf3 = [nonstat_signal.modulated_ts; nonstat_signal.modulating_ts]';
 %
 % The third signal shows rapid changes in time. Here both the frequency and
 % amplitude of both signals shows rapid changes. Note that the frequency
-% estimates are very noisy when the signal is not a relatively simple 
+% estimates are very noisy when the signal is not a relatively simple
 % mono-component oscillation.
 
 figure('Position',[100 100 1024 512])
@@ -329,7 +329,7 @@ for ii = 1:77
                         'SiftRelativeTolerance',.02,...
                         'Display',0);
     imfs(ii,:,1:size(tmp,2)) = tmp;
-    
+
     % 3.2) Compute instantaneous frequency and energy from IMFs for this trial
     [P1,F1,T1,insf,inse] = hht(tmp,dataFIC.fsample,'FrequencyLimits',[0,75],'FrequencyResolution',.5);
 
@@ -343,7 +343,7 @@ for ii = 1:77
         s = filter2(h,full(s)');
         hhts(ii,1:size(s,1),1:size(s,2),jj) = s;
     end
-    
+
 end
 
 %% Method comparison figure
@@ -432,20 +432,20 @@ ylabel('Frequency (Hz)')
 % factors if using the EMD in your own future applications.
 %
 % Firstly,is that the instantanous frequency estimation can be quite noisy.
-% This arises as it is computed from the differential of the instantaneous 
-% phase. Differentiation is challenging in a noisy signal and can lead to 
-% increased noise levels in the differentiated signal. This can be greatly 
+% This arises as it is computed from the differential of the instantaneous
+% phase. Differentiation is challenging in a noisy signal and can lead to
+% increased noise levels in the differentiated signal. This can be greatly
 % improved by using smoothing filters on the phase prior to computing
 % frequency.
 %
 % Secondly, mode-mixing can be a major problem in the EMD. this occurs when
-% a signal component isn't cleanly isolated into a single IMF. This is 
-% particularly common for transient signals which come on and off quickly 
+% a signal component isn't cleanly isolated into a single IMF. This is
+% particularly common for transient signals which come on and off quickly
 % in a noisy signal. This problem can be reduced by using the Ensemble EMD
 % or the Masked EMD to ensure a cleaner separation of signals. There is no
 % clear way to guarantee that signals will be separated a priori for a new signal
-% 
-% We strongly recommend that each EMD project should explore the masked and 
+%
+% We strongly recommend that each EMD project should explore the masked and
 % ensemble EMD options to make sure that decompositions are of a high
 % quality
 
@@ -479,6 +479,6 @@ ylabel('Frequency (Hz)')
 % A frank discussion of some problems with the EMD and how you might solve
 % them. Very practical paper focused on implementation details
 %
-% Rato, R. T., Ortigueira, M. D., & Batista, A. G. (2008). On the HHT, 
-%        its problems, and some solutions. Mechanical Systems and Signal 
+% Rato, R. T., Ortigueira, M. D., & Batista, A. G. (2008). On the HHT,
+%        its problems, and some solutions. Mechanical Systems and Signal
 %        Processing, 22(6), 1374?1394. https://doi.org/10.1016/j.ymssp.2007.11.028
