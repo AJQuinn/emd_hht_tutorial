@@ -9,7 +9,7 @@ components.
 Taken together, these steps allow us to compute time-frequency plots at a
 much higher resolution than available with most standard methods.
 
-Here we will analyse at some simulations and some example data using the
+Here, we will analyse at some simulations and some example data from the
 fieldtrip toolbox
 
 # Getting started
@@ -19,7 +19,6 @@ recent with the signal processing toolbox.
 The  Empirical Mode Decomposition functions used here are not available
 in older versions.
 
-
 Next, you will need a recent version of Fieldtrip on the  matlab path.
 Fieldtrip and a host of tutorials are available here:
 
@@ -28,11 +27,7 @@ http://www.fieldtriptoolbox.org
 Fieldtrip is used to compute a Hanning-Taper time-frequency transform for
 comparison with the Empirical Mode Decomposition.
 
-Finally, you will  need a copy of a Matlab Cross-Frequency Coupling toolbox
-which can be downloaded here:
+Finally, the ```simulate.m``` function provided here is an abridged version of the simulation
+functions in the CFC toolbox. For more details see:
 
 https://github.com/AJQuinn/cfc
-git clone https://github.com/AJQuinn/cfc.git
-
-We will use the simulation functions in this toolbox to generate some
-signals to illustrate the EMD.
