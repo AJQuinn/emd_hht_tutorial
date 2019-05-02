@@ -31,14 +31,10 @@
 %
 %----------
 %
-% Finally, you will  need a copy of a Matlab Cross-Frequency Coupling toolbox
-% which can be downloaded here:
+% Finally, the simulate.m function provided here is an abridged
+% version of the simulation functions in the CFC toolbox. For more details see:
 %
 % https://github.com/AJQuinn/cfc
-% git clone https://github.com/AJQuinn/cfc.git
-%
-% We will use the simulation functions in this toolbox to generate some
-% signals to illustrate the EMD.
 
 %% Getting Started
 %
