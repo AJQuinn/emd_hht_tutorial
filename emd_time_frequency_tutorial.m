@@ -45,7 +45,7 @@
 % Add relevant toolboxes to path
 
 addpath /path/to/fieldtrip % Update to match your folder structure
-addpath /path/to/emd_timefrequency_tutorial % Update to match your folder structure
+addpath /path/to/emd_hht_tutorial % Update to match your folder structure
 
 %% Sanity Checking
 %
