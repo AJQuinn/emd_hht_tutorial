@@ -31,3 +31,8 @@ Finally, the ```simulate.m``` function provided here is an abridged version of t
 functions in the CFC toolbox. For more details see:
 
 https://github.com/AJQuinn/cfc
+
+# The Tutorial
+
+To run the tutorial, open emd_time_frequency_tutorial.m in MatLab and run
+through the script one-cell at a time.
