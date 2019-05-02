@@ -367,7 +367,7 @@ ylabel('Frequency (Hz)');
 grid on
 
 subplot(5,1,[4 5])
-toplot = squeeze(sum(hhts(:,:,:,1:5),[1 4]));
+toplot = squeeze(sum(sum(hhts(:,:,:,1:5),1),4));
 contourf(dataFIC.time{1},1:100,toplot,linspace(0,10e-25,36),'linestyle','none');
 title('HHT')
 grid on
