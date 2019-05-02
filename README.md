@@ -34,5 +34,5 @@ https://github.com/AJQuinn/cfc
 
 # The Tutorial
 
-To run the tutorial, open emd_time_frequency_tutorial.m in MatLab and run
-through the script one-cell at a time.
+To run the tutorial, open ```emd_time_frequency_tutorial.m``` in MatLab and run
+through the script one cell at a time.
